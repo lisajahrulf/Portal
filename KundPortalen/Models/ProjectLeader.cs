@@ -8,6 +8,7 @@ namespace KundPortalen.Models
         public class ProjectLeader
         {
             public int ProjectLeaderId { get; set; }
-            public string Name { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
         }
 }

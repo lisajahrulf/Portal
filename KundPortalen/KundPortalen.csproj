@@ -100,10 +100,11 @@
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\Context.cs" />
-    <Compile Include="Models\DbRepository.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IRepository.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\ProjectLeader.cs" />
+    <Compile Include="Models\TestRepository.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

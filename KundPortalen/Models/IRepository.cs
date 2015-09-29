@@ -16,18 +16,23 @@ namespace KundPortalen.Models
         void CreateProject();
         void DeleteProject();
         void EditProject();
-        Project ListProject();
+        Project[] ListProject();
 
         //Projects leader
         void CreateProjectLeader();
         void DeleteProjectLeader();
-        ProjectLeader ListProjectLeader();
+        ProjectLeader[] ListProjectLeader();
 
         //Company
         void CreateCompany();
         void EditCompany();
         void DeleteCompany();
-        Company ListCompany();
+        Company[] ListCompany();
 
+        //Customers
+
+        void CreateCustomer();
+        void EditCustomer();
+        Customer[] ListCustomer();
     }
 }
