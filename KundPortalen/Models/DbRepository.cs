@@ -9,7 +9,15 @@ namespace KundPortalen.Models
     {
         public void CreateUser()
         {
-            throw new NotImplementedException();
+            var newUser = new User
+            {
+                UserId = 1,
+                Name = "Eva"
+            };
+
+            var db = new Context();
+            db.Users.Add(newUser);
+            db.SaveChanges();
         }
 
         public void DeleteUser()
@@ -37,9 +45,12 @@ namespace KundPortalen.Models
             throw new NotImplementedException();
         }
 
-        public void ListProject()
+        Project[] ListProject()
         {
-            throw new NotImplementedException();
+            using (var db = new Context())
+            {
+                return db.Projects.ToArray();
+            }
         }
 
         public void CreateProjectLeader()
@@ -52,9 +63,12 @@ namespace KundPortalen.Models
             throw new NotImplementedException();
         }
 
-        public void ListProjectLeader()
+        ProjectLeader[] ListProjectLeader()
         {
-            throw new NotImplementedException();
+            using (var db = new Context())
+            {
+                return db.ProjectLeaders.ToArray();
+            }
         }
 
         public void CreateCompany()
@@ -72,7 +86,25 @@ namespace KundPortalen.Models
             throw new NotImplementedException();
         }
 
-        public void ListCompany()
+        Company[] ListCompany()
+        {
+            using (var db = new Context())
+            {
+                return db.Companies.ToArray();
+            }
+        }
+
+        Project IRepository.ListProject()
+        {
+            throw new NotImplementedException();
+        }
+
+        ProjectLeader IRepository.ListProjectLeader()
+        {
+            throw new NotImplementedException();
+        }
+
+        Company IRepository.ListCompany()
         {
             throw new NotImplementedException();
         }

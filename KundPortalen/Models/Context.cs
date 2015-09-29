@@ -10,6 +10,9 @@ namespace KundPortalen.Models
     {
         public DbSet<User> Users { get; set; }
         public DbSet<ProjectLeader> ProjectLeaders { get; set; }
+        public DbSet<Company> Companies { get; set; }
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<Admin> Admins { get; set; }
        
     }
 
